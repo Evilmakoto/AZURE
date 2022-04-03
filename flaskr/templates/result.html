@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col align-self-center">
+        <h1>結果</h1>
+        {% for item in menus %}
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.price }}円</p>
+        {% endfor %}
+        <h2>合計：      {{ total }} 円</h2>
+    </div>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-3">
+        <button class="btn btn-primary" type="button" onclick="click_func();">
+            ガチャ！
+        </button>
+    </div>
+</div>
+
+{% endblock %}
